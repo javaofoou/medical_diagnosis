@@ -1,0 +1,2355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta property="og:title" content="My Official Website" />  
+<meta property="og:description" content="Welcome to the Official Landing Page of the 37TH OOU SUG AGS4,popularly konown as JAVA_OF_OOU." />  
+ <meta property="og:image" content="javaoou.png" />  
+<meta property="og:url" content="https://example.com/your-page-url" />  
+<meta property="og:type" content="website" /> 
+    <title>JLanding Page</title>
+    <style>
+        
+@media screen and (max-width: 699px){
+  *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+            text-decoration:none;
+            list-style:none;
+            font-family: "Inconsolata", monospace,sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+     header{
+        background: linear-gradient(180deg,#074FB0,#000000);
+        width:100%;
+        /*height: 75px;*/
+        display:flex;
+        align-items: center;
+        margin-top:-23px;
+        padding: 5px 5% 5px 5%;
+        box-shadow:5px 6px 12px rgb(167, 166, 166);
+     }
+     header nav{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        width:100%;
+        height: 100%;
+     }
+     header img{
+        width: 153px;
+        height: 60px;
+        margin-left: -34px;
+        margin-top: -20px;
+     }
+     nav .logo{
+     }
+     .fa-code{
+        color: white;
+        font-size: 1.5em;
+        margin-top: -20px;
+     }
+     header button{
+        float: right;
+        border: none;
+        background-color: transparent;
+        padding: 8px;
+        width: 28px;
+        height: 28px;
+        margin-top: -20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     nav{
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+       justify-content: space-between;
+    }
+     ul.links{
+        display:flex;
+        flex-direction:row;
+        justify-content: flex-end;
+        margin: -25px 2% 0px 0px;
+     }
+     ul.links li{
+        font-weight:bold;
+        font-size:0.8em;
+        display: none;
+        /*margin-top:25px;*/
+        color: rgb(255, 255, 255);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     }
+     ul.links i{
+        display: ;
+     }
+     ul.links a{
+        text-decoration: none;
+     }
+     ul.links li:link{
+        text-decoration: none;
+     }
+
+     ul.links li:hover{
+       cursor:pointer;
+       padding: 4px;
+       text-decoration: none;
+       background: rgba(0,0,0,0.15);
+     }
+    ul.links li:active{
+        border-radius: 5px 5px 5px 5px;
+       background: rgba(0,0,0,0.15);
+    }
+    #popbox{
+        background-color: #468be4;
+        height: 32px;
+        width: 100%;
+    }
+    #popbox ul.phone-navs{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center; 
+        padding:left;
+    }
+      #popbox ul.phone-navs a{
+          text-decoration: none;
+      }
+    #popbox ul.phone-navs li{
+      color: white;
+      font-family: monospace;
+      font-weight: bold;
+      font-size: 0.6em;
+      text-decoration:none;
+      display: flex;
+      justify-content: space-around;
+      margin: 5px;
+    }
+    
+    section.my-desc{
+        width:100%;
+        height:450px;
+        padding:10px;  
+        padding-bottom: 0px;
+        padding-top:10px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 80px;
+        background-color:rgb(238, 233, 233); background-image:radial-gradient(#adadad,#ffffff);
+       
+    }
+     #header-img img{
+        width: 350px;
+        height:470px;
+        margin-top:-70px;
+        object-fit:contain;
+     }
+    .desc-text{
+        width:100%;
+        background-color: rgba(197, 197, 197, 0.4);
+        margin-top:-300px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+     }
+     .desc-text h1{
+        font-size:1.1em;
+        background-color:rgba(235,236,240,0.6);
+        padding: 7px;
+        color:#0d1c33fa;
+     }
+     .desc-text h2{
+        font-size:1.0em;
+        margin-bottom:13px;
+        font-family: Helvetica Neue;
+        color:#0d1c33e7;
+     }
+     .desc-text p{
+        font-size:0.9em;
+        font-weight:bold;
+        word-spacing:0.3em;
+        line-height:0.9em;
+     }
+     .desc-text .btn{
+     margin:5px;
+     background-color: #07101d80;
+     border: 0px;
+     border 0px;
+        margin-bottom: 15px;
+        font-size:0.8em;
+     }
+     .desc-text .email{
+        font-size:0.7em;
+        margin-right:28px;
+        color: black;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 5px 5px 5px 5px;
+     }
+     .desc-text .cv{
+        font-size:0.7em;
+        background-color: #468be4;        
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+     }
+     section.about{
+        margin-top:20px;
+        margin-bottom:60px;
+    }
+    section.about h1{
+        font-size:1.0em;
+        color:rgba(0,0,0,0.8);
+        text-align:center;
+        margin-bottom:0px;
+    }
+    #abt-cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #carouselExampleAutoplaying{
+        width: 100%;
+        height: 350px;
+        margin-bottom: 65px;
+    }
+    .carousel-item{
+        height: 350px;
+       display:flex;
+       align-items: center;
+       align-self: center;
+       justify-content:center;
+       padding:20px;
+       margin-bottom:50px;
+    }
+    
+    .carousel-item h5{
+        background-color: rgba(197, 197, 197, 0.4);
+        padding: 8px;
+        text-align: center;
+        font-size: 0.9em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    .carousel-item img{
+        width:96%;
+        height:350px;
+        object-fit:fill;
+        margin-right:30px;
+    }
+    .carousel-caption{
+        background-color: rgba(0,0,0,0.4);
+        padding: 25px;
+        display: none;
+    }
+    .carousel-caption h5{
+       font-size: 0.7em;
+       margin-bottom: 10px;
+       display: block;
+    }
+    .carousel-caption p{
+        font-size:0.9em;
+        word-wrap:break-word;
+        line-height:1.1em;
+        text-align:justify;
+        font-weight:normal;
+
+    }
+   .services{
+        width:100%;
+        margin-top:100px;
+    }
+    .services p.head{
+        text-align:center;
+        margin-bottom:13px;
+    }
+    .services h1{
+      text-align:center;   
+      margin-bottom:5px;
+      font-size: 1.0em;
+    }
+    .services #ser-cards{
+        display:grid;
+        grid-template-columns: 1fr;
+        place-items:center;
+    }
+    .services .ser-cards{
+      margin:25px;
+      border: 2px solid #e4e4e4;
+      box-shadow:3px 3px 8px #8b8b8b;
+    }
+    #ser-cards img.card{
+        width:100%;
+        height:250px;
+        margin:0px;
+    }
+    
+    #ser-cards article{
+        
+    }
+    #ser-cards article h2{
+        font-size:0.9em;
+        text-align:center;
+        background-color:#ececeb;
+        padding:10px;
+    }
+    #ser-cards article p{
+        font-size:0.8em;
+        color:black;
+        /*border-top: 2px solid #e4e4e4;*/
+       background-image:linear-gradient(180deg,#ececeb,#ffffff);
+        text-align:justify;
+        word-wrap:wrap;
+        width:inherit;
+        padding:5px;
+    }
+    
+    
+    
+    section.skills{
+        margin-top:60px;
+        padding-left:6%;
+        margin-bottom: -50px;
+    }
+    .skill-main{
+        width:100%;
+        display:grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-row-gap:30px;
+    }
+    section .main-text h3{
+        text-align:center;
+        margin-bottom:40px;
+        font-size: 1.0em;
+    }
+    .skill-bar{
+        margin-bottom: 2.3rem;
+        width: 90%;
+    }
+    section .skill-main h3{
+        margin-bottom: 2rem;
+        font-size: 0.9em;
+        text-align:center;
+    }
+    .skill-left .skill-bar .info{
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0 10px;
+    } 
+    .skill-left .skill-bar .bar{
+        width:100%;
+        height: 7px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+        border-radius: 25px;
+        margin-top:10px;
+        position:relative;
+    }
+    .skill-bar .bar span{
+        width:50%;
+        height:100%;
+        position:absolute;
+        left:0;
+        background-image:linear-gradient(to right, rgb(0, 110, 255), rgb(65,105,225));
+        border-radius:25px;
+        box-shadow:2px 3px 7px black;
+    }
+ /*html 72,figma 60,css 70,javascript 55,reactjs 70,nodejs 70,php 70,laravel 65 */
+    .skill-bar .bar .html{
+        width: 90%;
+        animation: html 2s;
+    }
+    .skill-bar .bar .figma{
+        width: 70%;
+        animation: figma 3s;
+    }
+    .skill-bar .bar .css{
+        width: 80%;
+        animation: css 4s;
+    }
+    .skill-bar .bar .javascript{
+        width: 75%;
+        animation: javascript 5s;
+    }
+    .skill-bar .bar .reactjs{
+        width: 70%;
+        animation: reactjs 6s;
+    }
+    .skill-bar .bar .nodejs{
+        width: 80%;
+        animation: nodejs 7s
+    }
+    .skill-bar .bar .php{
+        width: 80%;
+        animation: php 8s;
+    }
+    .skill-bar .bar .laravel{
+        width: 80%;
+        animation: php 8s;
+    }
+    @keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:90%;
+    }
+}
+
+@keyframes figma{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:70%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:75%;
+    }
+}
+@keyframes reactjs{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:70%;
+    }
+}
+@keyframes nodejs{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+@keyframes php{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+@keyframes laravel{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:70%;
+    }
+}
+
+/*skill right */
+.skill-right{
+    
+}
+.skill-right h3{
+    text-align:center;
+}
+#professional{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items:center;
+    margin-left: -18%;
+}
+.container-box{
+    width:120px;
+    height:120px;
+    position:relative;
+    margin-top:40px;
+    margin-bottom:50px;
+}
+.outer{
+    height:160px;
+    width:160px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    padding:20px;
+}
+.inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+circle{
+    fill:none;
+    stroke: rgb(36, 80, 211)/*url(#GradientColor)*/;
+    stroke-width:20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset:472;
+}
+circle.one{
+    animation: circleOne 2s linear forwards;
+}
+circle.two{
+    animation: circleTwo 4s linear forwards;
+}
+circle.three{
+    animation: circleThree 5s linear forwards;
+}
+circle.four{
+    animation: circleFour 6s linear forwards;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.skill-right .container-box p{
+    text-align:center;
+    margin-left:50px;
+    font-size: 0.9em;
+}
+@keyframes circleOne{
+    100%{
+        stroke-dashoffset: 110;
+    }
+}
+@keyframes circleTwo{
+    100%{
+        stroke-dashoffset: 130.5;
+    }
+}
+@keyframes circleThree{
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+@keyframes circleFour{
+    100%{
+        stroke-dashoffset: 85;
+    }
+}
+
+
+#number{
+    font-weight: 600;
+    color: #555;
+}
+circle{
+    fill:none;
+    stroke: rgb(36, 80, 211)/*url(#GradientColor)*/;
+    stroke-width:20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset:472;
+}
+circle.one{
+    animation: circleOne 2s linear forwards;
+}
+circle.two{
+    animation: circleTwo 4s linear forwards;
+}
+circle.three{
+    animation: circleThree 5s linear forwards;
+}
+circle.four{
+    animation: circleFour 6s linear forwards;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.skill-right .container-box p{
+    text-align:center;
+    margin-top:5px;
+}
+@keyframes circleOne{
+    100%{
+        stroke-dashoffset: 110;
+    }
+}
+@keyframes circleTwo{
+    100%{
+        stroke-dashoffset: 130.5;
+    }
+}
+@keyframes circleThree{
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+@keyframes circleFour{
+    100%{
+        stroke-dashoffset: 85;
+    }
+}
+.blogs-grp{
+  width: 96%;
+  margin-left:2%;
+  margin-top:-140px;
+}
+.blg-card{
+  display: flex;
+  width: 92%;
+  margin-left:4%;
+  flex-direction: column;
+  margin-top: 20px;
+  border: 2px solid #e4e4e4;
+      box-shadow:3px 3px 8px #8b8b8b;
+}
+.blogs-grp h1{
+    font-size: 1.0em;
+    margin-left: 43%;
+    margin-bottom: 35px;
+}
+.blg-card img{
+   width:96%;
+   height: 280px;
+   margin-left: 2%;
+   margin-top: 10px;
+   }
+.blg-card article{
+   width:96%;
+   margin-left: 2%;
+}
+ h2.blg-title{
+   font-size: 0.85em;
+   text-align: center;
+   font-weight:bold;    
+   font-family:monospace;
+   padding:6px;
+   background-color:#00246a;
+   color: white;
+ }
+ 
+ p.blg-desc{
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: justify;
+}
+section.contact{
+   padding:30px; 
+}
+.contact-box{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+.contact-left{
+   width:96%;
+   margin-left:2%
+   float right;
+   
+} 
+.contact-left h1{
+    font-family: sans-serif;
+    font-size: 1.0em;
+    font-weight: bold;
+    color:#ffffff;
+}
+.contact-left p{
+    color: #a9c2e4;
+}
+.contact-left .socials i{
+    color: #a9c2e4;
+    font-size: 1.2em;
+}
+.contact-right{
+   margin-top: 10px;
+}
+input,textarea,submit{
+    display:block;
+    width:98%;
+    margin-left: 1%;
+    border:0px;
+    color: #a9c2e4;
+    background-color: rgba(0, 0, 0, 0.555);
+    font-size:1.0em;
+    height:38px;
+    padding:10px;
+    margin-top:35px;
+}
+input[type="submit"]{
+    background-color:#1b65c7;
+    border: 0px;
+    color:rgb(255, 255, 255);
+    margin-top:5px;
+}
+textarea{
+    height:200px;
+}
+.copy{
+    width: 98%;
+    color:#a9c2e4;
+    text-align: center;
+    margin-left: 23%;
+}
+footer{
+    background: radial-gradient(#074FB0,#000000);
+    margin-top: 60px;
+}
+}
+
+@media (min-width: 700px) and (max-width: 991px){
+    *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+            text-decoration:none;
+            list-style:none;
+            overflow:none;
+           /* font-family: "Inconsolata", monospace,sans-serif;*/
+        }
+        a{
+            text-decoration: none;
+        }
+     header{
+        background: linear-gradient(180deg,#074FB0,#000000);
+        width:100%;
+        height: 55px;
+        padding: 0px 5% 5px 0px;
+        box-shadow:5px 6px 12px rgb(167, 166, 166);
+        padding-left: 2%;
+        position: fixed;
+        z-index: 2;
+        overflow: hidden;
+     }
+     header .fa-code{
+        color: white;
+        font-size: 1.0em;
+        margin:0px -10px 0px 0px;
+     }
+     header img{
+        width: 150px;
+        height: 60px;
+        margin-top: -4px;
+     }
+     nav{
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+       /* justify-content: space-between;*/
+    }
+     ul.links{
+        display:flex;
+        flex-direction:row;
+        justify-content: flex-end;
+        margin: -37px 0px 0px 0px;
+        color: rgb(255, 255, 255);
+
+     }
+     ul.links li{
+        font-weight:bold;
+        font-size:0.85em;
+        font-family: "Inconsolata", monospace,sans-serif;
+        margin: 0px 0px 0px 0px;
+        margin-left:25px;
+        color: rgb(255, 255, 255);
+        float: right;
+        z-index:2px;
+     }
+     ul.links i{
+        font-size:1.2em;
+        margin-right:10px;
+     }
+     ul.links a{
+        text-decoration: none;
+     }
+     ul.links li:link{
+        text-decoration: none;
+     }
+
+     ul.links li:hover{
+       cursor:pointer;
+       text-decoration: none;
+       background: rgba(0,0,0,0.15);
+     }
+    ul.links li:active{
+        border-radius: 5px 5px 5px 5px;
+       background: rgba(0,0,0,0.15);
+    }
+    header button{
+        display: none;
+    }
+    section.my-desc{
+        display:grid;
+        width:100%;
+        grid-template-columns:1fr 2fr;
+        padding:10px;  
+        padding-top:30px;
+        margin-bottom: 60px;
+        background-color:rgb(238, 233, 233);
+       background-image:radial-gradient(#adadad,#ffffff);
+        align-items:center;
+        justify-content:center;
+    }
+     #header-img img{
+        width: 400px;
+        height:400px;
+        margin-top:10px;
+        object-fit:contain;
+     }
+     #popbox{
+        display: none;
+     }
+    .desc-text{
+        margin-left: -40px;
+     }
+     .desc-text h1{
+        font-size:1.0em;
+     }
+     .desc-text h2{
+        font-size:1.0em;
+        margin-bottom:13px;
+     }
+     .desc-text p{
+        font-size:0.9em;
+        font-weight:bold;
+        word-spacing:0.3em;
+        line-height:1.5em;
+     }
+     .desc-text .btn{
+        margin: 3px;
+        font-size:0.8em;
+     }
+     .desc-text .email{
+        font-size:0.7em;
+        margin-right:28px;
+     }
+     .desc-text .cv{
+        font-size:0.7em;
+     }
+
+circle{
+    fill:none;
+    stroke: rgb(36, 80, 211)/*url(#GradientColor)*/;
+    stroke-width:20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset:472;
+}
+circle.one{
+    animation: circleOne 2s linear forwards;
+}
+circle.two{
+    animation: circleTwo 4s linear forwards;
+}
+circle.three{
+    animation: circleThree 5s linear forwards;
+}
+section.about{
+        margin-top:20px;
+        margin-bottom:50px;
+    }
+
+    section.about h1{
+        font-size:1.0em;
+        color:rgba(0,0,0,0.8);
+        text-align:center;
+        margin-bottom:0px;
+    }
+    #abt-cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #carouselExampleAutoplaying{
+        width: 70%;
+        height: 360px;
+    }
+    .carousel-item{
+        height: 320px;
+       display:flex;
+       align-items: center;
+       align-self: center;
+       justify-content:center;
+       padding:20px;
+       margin-bottom:5px;
+    }
+    
+    .carousel-item h5{
+        background-color: rgba(197, 197, 197, 0.4);
+        padding: 8px;
+        text-align: center;
+        font-size: 0.9em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+    }
+    .carousel-item img{
+        width:50%;
+        height:340px;
+        object-fit:fit;
+        margin-right:30px;
+    }
+    .carousel-caption{
+        background-color: rgba(0,0,0,0.4);
+        padding: 25px;
+        display: none;
+    }
+    .carousel-caption h5{
+       font-size: 0.7em;
+       margin-bottom: 10px;
+       display: block;
+    }
+    .carousel-caption p{
+        font-size:0.9em;
+        word-wrap:break-word;
+        line-height:1.1em;
+        text-align:justify;
+        font-weight:normal;
+
+    }    
+    .services{
+        width:100%;
+        margin-top:50px;
+    }
+    .services p.head{
+        text-align:center;
+        margin-bottom:13px;
+    }
+    .services h1{
+      text-align:center;   
+      margin-bottom:25px;
+      font-size: 1.0em;
+    }
+    .services #ser-cards{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content:center;
+    }
+    .services .ser-cards{
+      margin:25px;
+      border: 2px solid #e4e4e4;
+      box-shadow:3px 3px 8px #8b8b8b;
+    }
+    #ser-cards img.card{
+        width:100%;
+        height:250px;
+        margin:0px;
+    }
+    
+    #ser-cards article{
+        
+    }
+    #ser-cards article h2{
+        font-size:0.9em;
+        text-align:center;
+        background-color:#ececeb;
+        padding:10px;
+    }
+    #ser-cards article p{
+        font-size:0.8em;
+        color:black;
+        /*border-top: 2px solid #e4e4e4;*/
+       background-image:linear-gradient(180deg,#ececeb,#ffffff);
+        text-align:justify;
+        word-wrap:wrap;
+        width:inherit;
+        padding:5px;
+    }
+    section.skills{
+        margin-top:60px;
+        padding-left:6%;
+        margin-bottom: -50px;
+    }
+    .skill-main{
+        width:100%;
+        display:grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-row-gap:30px;
+    }
+    section .main-text h3{
+        text-align:center;
+        margin-bottom:40px;
+        font-size: 1.0em;
+    }
+    .skill-bar{
+        margin-bottom: 2.3rem;
+        width: 90%;
+    }
+    section .skill-main h3{
+        margin-bottom: 2rem;
+        font-size: 0.9em;
+        text-align:center;
+    }
+    .skill-left .skill-bar .info{
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0 10px;
+    } 
+    .skill-left .skill-bar .bar{
+        width:100%;
+        height: 7px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+        border-radius: 25px;
+        margin-top:10px;
+        position:relative;
+    }
+    .skill-bar .bar span{
+        width:50%;
+        height:100%;
+        position:absolute;
+        left:0;
+        background-image:linear-gradient(to right, rgb(0, 110, 255), rgb(65,105,225));
+        border-radius:25px;
+        box-shadow:2px 3px 7px black;
+    }
+ /*html 72,figma 60,css 70,javascript 55,reactjs 70,nodejs 70,php 70,laravel 65 */
+    .skill-bar .bar .html{
+        width: 90%;
+        animation: html 2s;
+    }
+    .skill-bar .bar .figma{
+        width: 70%;
+        animation: figma 3s;
+    }
+    .skill-bar .bar .css{
+        width: 80%;
+        animation: css 4s;
+    }
+    .skill-bar .bar .javascript{
+        width: 75%;
+        animation: javascript 5s;
+    }
+    .skill-bar .bar .reactjs{
+        width: 70%;
+        animation: reactjs 6s;
+    }
+    .skill-bar .bar .nodejs{
+        width: 80%;
+        animation: nodejs 7s
+    }
+    .skill-bar .bar .php{
+        width: 80%;
+        animation: php 8s;
+    }
+    .skill-bar .bar .laravel{
+        width: 80%;
+        animation: php 8s;
+    }
+    @keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:90%;
+    }
+}
+
+@keyframes figma{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:70%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:75%;
+    }
+}
+@keyframes reactjs{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:70%;
+    }
+}
+@keyframes nodejs{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+@keyframes php{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+@keyframes laravel{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:70%;
+    }
+}
+
+/*skill right */
+.skill-right{
+    
+}
+.skill-right h3{
+    text-align:center;
+}
+#professional{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items:center;
+}
+.container-box{
+    width:120px;
+    height:120px;
+    position:relative;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+.outer{
+    height:160px;
+    width:160px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    padding:20px;
+}
+.inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+circle{
+    fill:none;
+    stroke: rgb(36, 80, 211)/*url(#GradientColor)*/;
+    stroke-width:20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset:472;
+}
+circle.one{
+    animation: circleOne 2s linear forwards;
+}
+circle.two{
+    animation: circleTwo 4s linear forwards;
+}
+circle.three{
+    animation: circleThree 5s linear forwards;
+}
+circle.four{
+    animation: circleFour 6s linear forwards;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.skill-right .container-box p{
+    text-align:center;
+    margin-left:50px;
+    font-size: 0.9em;
+}
+@keyframes circleOne{
+    100%{
+        stroke-dashoffset: 110;
+    }
+}
+@keyframes circleTwo{
+    100%{
+        stroke-dashoffset: 130.5;
+    }
+}
+@keyframes circleThree{
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+@keyframes circleFour{
+    100%{
+        stroke-dashoffset: 85;
+    }
+}
+#number{
+    font-weight: 600;
+    color: #555;
+}
+.blogs-grp{
+  width: 90%;
+  margin-left: 10%;
+}
+.blg-card{
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+}
+.blogs-grp h1{
+    font-size: 1.1em;
+    margin-left: 43%;
+    margin-bottom: 35px;
+}
+.blg-card img{
+   width:200px;
+   height: 150px;
+   margin-left: 40px;
+   border: 10px 10px 10px 10px;
+}
+.blg-card article{
+   width:45%;
+   margin-left: 30px;
+}
+ h2.blg-title{
+   font-size: 1.0em;
+   text-align: center;
+ }
+ p.blg-desc{
+   font-family: Arial, Helvetica, sans-serif;
+}
+section.contact{
+   padding:30px; 
+}
+.contact-box{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-left{
+   position:relative;
+   left: 20%;
+} 
+.contact-left h1{
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color:#ffffff;
+}
+.contact-left p{
+    color: #a9c2e4;
+}
+.contact-left .socials i{
+    color: #a9c2e4;
+    font-size: 1.2em;
+}
+.contact-right{
+  position: relative;
+  right:20%;
+}
+input,textarea,submit{
+    display:block;
+    width:85%;
+    border:0px;
+    color: #a9c2e4;
+    background-color: rgba(0, 0, 0, 0.555);
+    font-size:1.0em;
+    height:38px;
+    padding:10px;
+    margin-top:35px;
+}
+input[type="submit"]{
+    background-color:#1b65c7;
+    border: 0px;
+    color:rgb(255, 255, 255);
+}
+textarea{
+    height:150px;
+}
+.copy{
+    color:#a9c2e4;
+    margin-left: 4%;
+}
+footer{
+    background: radial-gradient(#074FB0,#000000);
+    margin-top: 60px;
+}
+}
+@media (min-width: 992px) and (max-width: 1500px){
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+            text-decoration:none;
+            list-style:none;
+            overflow:none;
+            font-family: "Inconsolata", monospace,sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+     header{
+        background: linear-gradient(180deg,#074FB0,#000000);
+        width:100%;
+        height: 55px;
+        padding: 0px 5% 5px 0px;
+        box-shadow:5px 6px 12px rgb(167, 166, 166);
+        padding-left: 2%;
+     }
+     header .fa-code{
+        color: white;
+        font-size: 1.2em;
+        margin:0px -10px 0px 0px;
+     }
+     header img{
+        width: 150px;
+        height: 53px;
+        margin-top: -6px;
+     }
+     nav{
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+       /* justify-content: space-between;*/
+    }
+     ul.links{
+        display:flex;
+        flex-direction:row;
+        justify-content: flex-end;
+        margin: -35px 0px 0px 0px;
+     }
+     ul.links li{
+        font-weight:bold;
+        font-size:1.0em;
+        margin: 0px 0px 0px 0px;
+        margin-left:25px;
+        color: rgb(255, 255, 255);
+        float: right;
+     }
+     ul.links i{
+        font-size:1.2em;
+        margin-right:10px;
+     }
+     ul.links a{
+        text-decoration: none;
+     }
+     ul.links li:link{
+        text-decoration: none;
+     }
+
+     ul.links li:hover{
+       cursor:pointer;
+       text-decoration: none;
+       background: rgba(0,0,0,0.15);
+     }
+    ul.links li:active{
+        border-radius: 5px 5px 5px 5px;
+       background: rgba(0,0,0,0.15);
+    }
+    header button{
+        display: none;
+    }
+    section.my-desc{
+        display:grid;
+        width:100%;
+        grid-template-columns:1fr 2fr;
+        padding:10px;  
+        padding-top:40px;
+        background-color:rgb(238, 233, 233);
+       background-image:radial-gradient(#adadad,#ffffff);
+        align-items:center;
+        justify-content:center;
+    }
+     #header-img img{
+        width: 600px;
+        height:600px;
+        margin-top:-60px;
+        object-fit:contain;
+     }
+     #popbox{
+        display: none;
+     }
+    .desc-text{
+
+     }
+     .desc-text h1{
+        font-size:1.2em;
+     }
+     .desc-text h2{
+        font-size:1.2em;
+        margin-bottom:13px;
+     }
+     .desc-text p{
+        font-size:0.9em;
+        font-weight:bold;
+        word-spacing:0.3em;
+        line-height:1.5em;
+     }
+     .desc-text .btn{
+        margin: 5px;
+        font-size:0.8em;
+     }
+     .desc-text .email{
+        font-size:0.7em;
+        margin-right:28px;
+     }
+     .desc-text .cv{
+        font-size:0.7em;
+     }
+circle{
+    fill:none;
+    stroke: rgb(36, 80, 211)/*url(#GradientColor)*/;
+    stroke-width:20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset:472;
+}
+circle.one{
+    animation: circleOne 2s linear forwards;
+}
+circle.two{
+    animation: circleTwo 4s linear forwards;
+}
+circle.three{
+    animation: circleThree 5s linear forwards;
+}
+circle.four{
+    animation: circleFour 6s linear forwards;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.skill-right .container-box p{
+    text-align:center;
+    margin-top:5px;
+}
+@keyframes circleOne{
+    100%{
+        stroke-dashoffset: 110;
+    }
+}
+@keyframes circleTwo{
+    100%{
+        stroke-dashoffset: 130.5;
+    }
+}
+@keyframes circleThree{
+    100%{
+        stroke-dashoffset: 100;
+    }
+}
+@keyframes circleFour{
+    100%{
+        stroke-dashoffset: 85;
+    }
+}
+.blogs-grp{
+  width: 90%;
+  margin-left: 4%;
+  margin-top: 120px;
+}
+.blg-card{
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+}
+.blogs-grp h1{
+    font-size: 1.1em;
+    margin-left: 43%;
+    margin-bottom: 35px;
+}
+.blg-card img{
+   width:200px;
+   height: 150px;
+   margin-left: 40px;
+   border: 10px 10px 10px 10px;
+}
+.blg-card article{
+   width:45%;
+   margin-left: 30px;
+}
+ h2.blg-title{
+   font-size: 1.0em;
+   text-align: center;
+ }
+ p.blg-desc{
+   font-family: Arial, Helvetica, sans-serif;
+}
+section.contact{
+   padding:30px; 
+}
+.contact-box{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-left{
+   position:relative;
+   left: 20%;
+} 
+.contact-left h1{
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color:#ffffff;
+}
+.contact-left p{
+    color: #a9c2e4;
+}
+.contact-left .socials i{
+    color: #a9c2e4;
+    font-size: 1.2em;
+}
+.contact-right{
+  position: relative;
+  right:20%;
+}
+input,textarea,submit{
+    display:block;
+    width:80%;
+    border:0px;
+    color: #a9c2e4;
+    background-color: rgba(0, 0, 0, 0.555);
+    font-size:1.0em;
+    height:38px;
+    padding:10px;
+    margin-top:35px;
+}
+input[type="submit"]{
+    background-color:#1b65c7;
+    border: 0px;
+    color:rgb(255, 255, 255);
+}
+textarea{
+    height:200px;
+}
+.copy{
+    color:#a9c2e4;
+    text-align: center;
+    margin-left: 10%;
+}
+footer{
+    background: radial-gradient(#074FB0,#000000);
+    margin-top: 100px;
+}
+header .btn{
+  padding: 0.375rem 1.25rem;
+  width: 40px;
+}
+section.about{
+        margin-top:70px;
+        margin-bottom:70px;
+    }
+
+    section.about h1{
+        font-size:1.0em;
+        color:rgba(0,0,0,0.8);
+        text-align:center;
+        margin-bottom:0px;
+    }
+    #abt-cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #achievement{
+        margin-top: 150px;
+    }
+    #carouselExampleAutoplaying{
+        width: 60%;
+        height: 450px;
+    }
+    .carousel-item{
+        width: 65%;
+       display:flex;
+       align-items: center;
+       align-self: center;
+       justify-content:center;
+       padding:20px;
+       margin-bottom:5px;
+    }
+    .carousel-item h5{
+        background-color: rgba(197, 197, 197, 0.4);
+        padding: 8px;
+        text-align: center;
+        font-size: 1.0em;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+    }
+    .carousel-item img{
+        width:50%;
+        height:470px;
+        object-fit:fill;
+        margin-right:30px;
+    }
+    .carousel-caption{
+        background-color: rgba(0,0,0,0.4);
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+    .carousel-caption h5{
+       font-size: 1.1em;
+       display: none;
+       margin-bottom: 15px;
+    }
+    .carousel-caption p{
+        font-size:0.9em;
+        word-wrap:break-word;
+        line-height:1.5em;
+        text-align:justify;
+        font-weight:normal;
+    }    
+    .services{
+        width:100%;
+        margin-top:200px;
+    }
+    .services p.head{
+        text-align:center;
+        margin-bottom:13px;
+    }
+    .services h1{
+      text-align:center;   
+      margin-bottom:25px;
+      font-size: 1.0em;
+    }
+    .services #ser-cards{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content:center;
+    }
+    .services .ser-cards{
+      margin:25px;
+      border: 2px solid #e4e4e4;
+      box-shadow:3px 3px 8px #8b8b8b;
+    }
+    #ser-cards img.card{
+        width:100%;
+        height:250px;
+        margin:0px;
+    }
+    
+    #ser-cards article{
+        
+    }
+    #ser-cards article h2{
+        font-size:0.9em;
+        text-align:center;
+        background-color:#ececeb;
+        padding:10px;
+    }
+    #ser-cards article p{
+        font-size:0.8em;
+        color:black;
+        /*border-top: 2px solid #e4e4e4;*/
+       background-image:linear-gradient(180deg,#ececeb,#ffffff);
+        text-align:justify;
+        word-wrap:wrap;
+        width:inherit;
+        padding:5px;
+    }
+    section.skills{
+        margin-top:100px;
+        padding-left:6%;
+    }
+    .skill-main{
+        width:100%;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-row-gap:30px;
+        grid-column-gap:30px;
+    }
+    section .main-text h3{
+        text-align:center;
+        margin-bottom:40px;
+        font-size: 1.0em;
+    }
+    .skill-bar{
+        margin-bottom: 2.3rem;
+    }
+    section .skill-main h3{
+        margin-bottom: 2rem;
+        font-size: 0.9em;
+        text-align:center;
+    }
+    .skill-left .skill-bar .info{
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 0 10px;
+    } 
+    .skill-left .skill-bar .bar{
+        width:100%;
+        height: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+        border-radius: 25px;
+        margin-top:10px;
+        position:relative;
+    }
+    .skill-bar .bar span{
+        width:50%;
+        height:100%;
+        position:absolute;
+        left:0;
+        background-image:linear-gradient(to right, rgb(0, 110, 255), rgb(65,105,225));
+        border-radius:25px;
+        box-shadow:2px 3px 7px black;
+    }
+ /*html 72,figma 60,css 70,javascript 55,reactjs 70,nodejs 70,php 70,laravel 65 */
+    .skill-bar .bar .html{
+        width: 90%;
+        animation: html 2s;
+    }
+    .skill-bar .bar .figma{
+        width: 70%;
+        animation: figma 3s;
+    }
+    .skill-bar .bar .css{
+        width: 80%;
+        animation: css 4s;
+    }
+    .skill-bar .bar .javascript{
+        width: 75%;
+        animation: javascript 5s;
+    }
+    .skill-bar .bar .reactjs{
+        width: 70%;
+        animation: reactjs 6s;
+    }
+    .skill-bar .bar .nodejs{
+        width: 80%;
+        animation: nodejs 7s
+    }
+    .skill-bar .bar .php{
+        width: 80%;
+        animation: php 8s;
+    }
+    .skill-bar .bar .laravel{
+        width: 70%;
+        animation: laravel 9s;
+    }
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:90%;
+    }
+}
+
+@keyframes figma{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:70%;
+    }
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+
+@keyframes javascript{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:75%;
+    }
+}
+@keyframes reactjs{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:70%;
+    }
+}
+@keyframes nodejs{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+@keyframes php{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:80%;
+    }
+}
+@keyframes laravel{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:70%;
+    }
+}
+
+/*skill right */
+.skill-right{
+    padding-left:100px;
+}
+.skill-right h3{
+    text-align:center;
+    margin-left:-80px;
+}
+#professional{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content:center;
+    align-self:center;
+}
+.container-box{
+    width:160px;
+    height:160px;
+    position:relative;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.outer{
+    height:160px;
+    width:160px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    padding:20px;
+}
+.inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+                inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+                -0.5px -0.5px 0px rgba(255,255,255,1),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+#number{
+    font-weight: 600;
+    color: #555;
+}
+}
+    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/07fa3d3b0b.js" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function drpmenu(){
+        let menu = document.getElementById('menu');
+        let popbox = document.getElementById('popbox');
+        if(popbox.style.display=='none'){
+            popbox.style.display = 'block';
+        }
+        else{
+            popbox.style.display = 'none';
+        }
+    }
+</script>
+</head>
+<body>
+    <header id="heading">    
+        <!--navlinks-->
+         <nav>    
+            <span class="logo"></span>
+            <i class="fas fa-code"></i>  
+            <img src="brandlogo.png" alt="logo">
+         </span>
+        <ul class="links">
+             <a href="index.html"><li>Home</li></a>
+            <a href="#about"><li>About Me</li></a>
+            <a href="#achievement"><li>Achievements</li></a>
+             <a href="#services"><li>Services</li></a>
+             <a href="#skills"><li>Skills</li></a>
+             <a href="#blog"><li>Blogs</li></a>
+            <a href="#contact"><li>Contact Me</li></a>
+        </ul>
+        <button id="menu" onclick="drpmenu();" style="color: white; font-size: 1.4em;"><i class="fa fa-bars"></i></button>
+        </nav>
+        </header>
+        <div id="popbox">
+            <ul class="phone-navs">
+               <a href="#myabout"><li>About Me</li></a>
+               <a href="#myachieves"><li>Achievements</li></a>
+                <a href="#services"><li>Services</li></a>
+                <a href="#myskills"><li>Skills</li></a>
+                <a href="#myblogs"><li>Blogs</li></a>
+               <a href="#mycon"><li>Contact Me</li></a>
+           </ul>
+        </div>
+        <section class="my-desc">
+        <div id="header-img">
+            <img src="headimg.png">
+        </div>
+        <div class="desc-text">
+        <h1>Hi! Welcome to my Personal Website</h1>
+        <h2>I'm Salman Lukman Oluwadamilare,</h2>
+        <p>Popularly known as JAVA_OF_OOU.</p>
+        <p>Web Developer at Drey Smart Coding School.</p>
+        <p>Do you want to know more about me?</p>
+        <div class="btn-group">
+          <a target="_blank" href="https://allukmanniy.github.io/biography.html"><button class="btn btn-primary">Biography<i class="" alt="Biography"></i></button></a>
+            <a target="_blank" href="https://allukmanniy.github.io/interest.html"><button class="btn btn-dark">Interest<i class="Interest"></i></button></a>
+        </div>
+    <div><span class="email">Email:Dreysmart@gmail.com</span><a href="Salman_Cv.pdf" download="Salman_Cv" style="text-decoration:none;"><span class="cv">Download my CV <i class="fa fa-download"></i></a></span></div>
+    </div>
+        </section>
+    <section class="about" id="about">
+        <h1 id="myabout">About Me <i class="fa fa-address-book"></i> <a href="#heading">&#8593</a></h1>
+        <div id="abt-cards">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h5>A Creative Web Develper</h5>
+                    <img src="about_image.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                       
+                        <p>I am a passionate web developer with a strong focus on crafting dynamic, user-friendly digital experiences with proficiency in a wide range of technologies, 
+                            including JavaScript, PHP, ReactJS, Flutter, and both the MEAN and LAMP stacks.
+                            I have the expertise to bring any project to life. I thrive on turning complex challenges into simple, elegant solutions and enjoy creating seamless, 
+                            responsive websites that engage users and deliver results. I am committed to stay at the forefront of web development trends 
+                            to deliver innovative solutions that exceed expectations.</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <h5>A Passionate Aeromodeller</h5>
+                    <img src="about_image1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                            <p> I am a passionate aeromodeller with a deep love for designing, building and flying miniature aircraft. Over the years, I've honored my skills in constructing various 
+                                models, including drones, airplanes, and other flying machines. Each project allows me to combine creativity, engineering, and problem-solving to bring unique designs to life.
+                                I take pride in paying attention to detail and ensuring that each model is not only aesthetically pleasing but also highly functional in flight. 
+                              my goal is always to push the boundaries of what's possible in the world of aeromodelling.</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <h5>A strategic Entrepreneur</h5>
+                    <img src="about_image3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>I'm a strategic entrepreneur with a keen eye for identifying opportunities 
+                            and creating innovative solutions that drive business growth. 
+                            With a strong foundation in both planning and execution, 
+                            I excel at transforming ideas into successful ventures. 
+                            My approach is centered around understanding market dynamics, 
+                            leveraging data-driven insights, and building strong,sustainable business models.
+                            I've developed a diverse skill set that allows me to navigate challenges and turn them into profitable outcomes.</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                    <h5>A BSc holder in Computer Engineering</h5> 
+                    <img src="about_image2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                <p>I hold a Bachelor of Science (B.Sc.) degree in Computer Engineering, 
+                    a field that has provided me with a strong foundation in both computer science and electrical engineering. 
+                    My academic journey equipped me with a comprehensive 
+                    understanding of software development, hardware design, data structures, algorithms,
+             and system architecture through coursework and hands-on projects.
+             This education has not only sharpened my technical abilities but also honored my analytical thinking, 
+                enabling me to approach challenges with a solution-oriented mindset.</p>
+                  </div>
+                  </div>
+                  <div class="carousel-item">
+                    <h5>An Ambitious Student Leader</h5>
+                    <img src="about_image4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block"> 
+                <p>I've had the priviledge of making a transformative impact both in my high school and university.
+                As the former praepostor(Head Boy) of MHS Senior School,I demonstrated strong leadership by advocating for 
+                student's welfare to promote academic excellence.
+                Furthermore, As the prominent member of the "37TH OOU-SUG EXECUTIVES". I've inspired my peers by encouraging
+                 active participation in student affairs,ensuring their voice are heard.I aim to leave a lasting postive impact on OOUITES.</p>
+                  </div>
+                  </div>
+                  <div class="carousel-item">
+                    <h5>A Meticulous Problem Solver</h5>
+                    <img src="about_image5.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block"> 
+                <p>I approach challenges with patience and precision, breaking down complex issues into manageable parts to find effective solutions. whether tackling academic,professional or personal obstacles,I priortize through research, creative thinking, and collaboration to ensure the best outcomes.
+                My dedication to continous learning and improvement enables me to navigate problems efficiently and drive postive rersults in any situations.</p>
+                  </div>
+                  </div>
+                  <div class="carousel-item">
+                    <h5>A Success-Driven Personality</h5>
+                    <img src="about_image6.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <p>I am a champion,driven by a desire to succeed at all cost. I approach every challenge with a mindset of victory.
+                    I thrive in high-pressure environments and never settle for mediocrity. Whether It's personal growth or professional 
+                    achievement,I am commited to reaching the highest level.I believe beyond limits and taking calculated risks to ensure that every goal I set becomes a stepping
+                    stone toward becoming the best version of myself.</p>
+                  </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </section>
+    <section class="about" id="achievement">
+        <h1 id="myachieves">Achievements <i class="fas fa-award"></i> <a href="#heading">&#8593</a></h1>
+        <div id="abt-cards">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h5>Graduated from Olabisi Onabanjo university</h5>
+                    <img src="graduate.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Graduated from Olabisi Onabanjo university.</p>
+                      </div>
+                      </div>
+                      <div class="carousel-item">
+                        <h5>Emerged as the 37TH OOU SUG AGS4</h5>
+                        <img src="about_image4.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <p>Emerged and Served as the 37TH SUG AGS4 of Olabisi Onabanjo university.</p>
+                      </div>
+                      </div>
+                      <div class="carousel-item">
+                        <h5>Graduated from M.H.S High School</h5>
+                        <img src="graduation.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <p>Graduated from Molipa High School</p>
+                      </div>
+                      </div>
+                      <div class="carousel-item">
+                        <h5>Won 1st and 3rd place in Elite Inter-State Competition</h5>
+                        <img src="elite.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <p>Won 1st place in Verbal Reasoning and 3rd place in Current Affairs,Inter-State Elite Teen Magazine Competition,
+                            which involves secondary schools in Lagos and Ogun State.</p>
+                      </div>
+                      </div>
+                      <div class="carousel-item">
+                        <h5>Won 3rd place in JDPC Children Day Debate Competition(state)</h5>
+                        <img src="jdpc.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <p>Won 3rd place in JDPC Children Day Debate Competition(state).</p>
+                      </div>
+                      </div>
+                      <div class="carousel-item">
+                        <h5>Appointed and Served as The Head Boy of M.H.S Senior School</h5>
+                        <img src="prefect.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        <p>Appointed and Served as The Head Boy of M.H.S Senior School 2016/2017 Session.</p>
+                      </div>
+                      </div>
+                      <div class="carousel-item">
+                        <h5>Appointed and Served as The Ameer MSSN,M.H.S School</h5>
+                        <img src="screen.jpeg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Appointed and Served as The Ameer MSSN,M.H.S Senior School 2016/2017 Session.</p>
+                      </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </div>
+        </section>          
+    <section class="services" id="services">
+    <p class="head">what I will do for you</p>
+    <h1 id="myservs">Our Services <i class="fa fa-cogs"></i> <a href="#heading">&#8593</a></h1>
+    <div id="ser-cards">
+    <article class="ser-cards">
+        <i class=""></i>
+        <img src="ui_ux.png" class="card" alt="UI/UX">
+        <h2>UI/UX Design</h2>
+        <p>I will design a very attractive and eye-catching Website using Figma and Adobe XD.</p>
+    </article>
+    <article class="ser-cards">
+        <i class=""></i>
+        <img src="frontend.jpeg" class="card" alt="Frontend">
+        <h2>Frontend Development</h2>
+        <p>I builds websites from scatch using frontend technologies such as HTML,CSS,BOOTSTRAP and JAVASCRIPT.</p>
+    </article>
+    <article class="ser-cards">
+        <i class=""></i>
+        <img src="backend.jpeg" class="card" alt="Backend">
+        <h2>Backend Development</h2>
+        <p>I builds highly secured backend service of websites using PHP,NODE JS and LARAVEL</p>
+    </article>
+    <article class="ser-cards">
+        <i class=""></i> 
+        <img src="fullstack.jpeg" class="card" alt="Fullstack">
+        <h2>Full Stack</h2>
+        <p>I'm a skilled fullstack web developer proficient in both LAMP and MERN STACK</p>
+    </article>
+    </div>
+    </section>
+    <section class="skills" id="skills">
+        <div class="main-text">
+            <h3 id="myskills">My Skills <i class="fas fa-laptop-code"></i> <a href="#heading">&#8593</a></h3>
+        </div>
+
+        <div class="skill-main">
+            <div class="skill-left">
+            <h3>Technical Skills</h3>
+            <div class="skill-bar">
+            <div class="info">
+                <p>HTML</p>
+                <p>90%</p>
+            </div> 
+            <div class="bar">
+            <span class="html"></span>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <div class="info">
+                    <p>FIGMA</p>
+                    <p>70%</p>
+                </div> 
+                <div class="bar">
+                <span class="figma"></span>
+                    </div>
+                </div>
+                <div class="skill-bar">
+                    <div class="info">
+                        <p>CSS</p>
+                        <p>80%</p>
+                    </div> 
+                    <div class="bar">
+                    <span class="css"></span>
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="info">
+                            <p>Javascript</p>
+                            <p>75%</p>
+                        </div> 
+                        <div class="bar">
+                        <span class="javascript"></span>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="info">
+                                <p>React Js</p>
+                                <p>70%</p>
+                            </div> 
+                            <div class="bar">
+                            <span class="reactjs"></span>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="info">
+                                    <p>Node Js</p>
+                                    <p>80%</p>
+                                </div> 
+                                <div class="bar">
+                                <span class="nodejs"></span>
+                                    </div>
+                                </div>
+                            <div class="skill-bar">
+                                <div class="info">
+                                    <p>PHP</p>
+                                    <p>80%</p>
+                                </div> 
+                                <div class="bar">
+                                <span class="php"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="info">
+                                        <p>LARAVEL</p>
+                                        <p>70%</p>
+                                    </div> 
+                                    <div class="bar">
+                                    <span class="laravel"></span>
+                                        </div>
+                                    </div>    
+                            </div>  
+                    <div class="skill-right">
+                     <h3>Professional Skills</h3>
+                     <div id="professional">
+                     <div class="container-box">
+                        <div class="outer">
+                        <div class="inner">
+                        <div id="number">80%</div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                            <defs>
+                               <linearGradient id="GradientColor">
+                                   <stop offset="0%" stop-color="#e91e63" />
+                                   <stop offset="100%" stop-color="#673ab7" />
+                               </linearGradient> 
+                            </defs>
+                            <circle cx="80" cy="80" r="70" stroke-linecap="round" class="one"/>
+                           </svg>
+                        </div>
+                        <p>Creativity</p>
+                     </div>
+                     <div class="container-box">
+                        <div class="outer">
+                        <div class="inner">
+                        <div id="number">75%</div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                            <defs>
+                               <linearGradient id="GradientColor">
+                                   <stop offset="0%" stop-color="#e91e63" />
+                                   <stop offset="100%" stop-color="#673ab7" />
+                               </linearGradient> 
+                            </defs>
+                            <circle cx="80" cy="80" r="70" stroke-linecap="round" class="two"/>
+                           </svg>
+                        </div>
+                        <p>Team Work</p>
+                     </div>
+                     <div class="container-box">
+                        <div class="outer">
+                        <div class="inner">
+                        <div id="number">85%</div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                            <defs>
+                               <linearGradient id="GradientColor">
+                                   <stop offset="0%" stop-color="#e91e63" />
+                                   <stop offset="100%" stop-color="#673ab7" />
+                               </linearGradient> 
+                            </defs>
+                            <circle cx="80" cy="80" r="70" stroke-linecap="round" class="three"/>
+                           </svg>
+                        </div>
+                        <p>Time Management</p>
+                     </div>
+                     <div class="container-box">
+                        <div class="outer">
+                        <div class="inner">
+                        <div id="number">90%</div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                            <defs>
+                               <linearGradient id="GradientColor">
+                                   <stop offset="0%" stop-color="#e91e63" />
+                                   <stop offset="100%" stop-color="#673ab7" />
+                               </linearGradient> 
+                            </defs>
+                            <circle cx="80" cy="80" r="70" stroke-linecap="round" class="four"/>
+                           </svg>
+                        </div>
+                        <p>Critical Thinking</p>
+                     </div>
+                    </div>
+                    </div>                     
+        </div>
+    </section>
+    <section class="blogs-grp" id="blog">
+        <h1 id="#myblogs">Blogs <i class='fas fa-blog'></i> <a href="#heading">&#8593</a></h1>
+        <div class="blg-card">
+            <img src="blogs/graduation_pic.jpg" alt="">
+            <article>
+                <h2 class="blg-title">My convocation ceremony held on Jan 31st,2025</h2>
+                <p class="blg-desc">Comr. Salman Lukman Oluwadamilare convocation ceremony was held at PS Campus,Olabisi Onabanjo university.
+                He obtained a Bachelor's Degree after 5years in which he studied computer Engineering.
+                </p>
+            </article>
+        </div>
+        <div class="blg-card">
+            <img src="blogs/twitterspace.png" alt="">
+            <article>
+                <h2 class="blg-title">Hosted a podcast on Twitter</h2>
+                <p class="blg-desc">It was a great pleasure to host a twitter podcast alongside an Expert from United Kingdom. <bold>Title: Tech Roadmap 2025.</bold>
+ <p>Listen:</p>
+   <a href="https://x.com/JAVA_OF_OOU/status/1869462669318918360?t=FP_raBsl7jwW76UNJiu29w&s=19" style="font-size:0.8em;"> https://x.com/JAVA_OF_OOU/status/1869462669318918360?t=FP_raBsl7jwW76UNJiu29w&s=19</a>
+                    
+
+                </p>
+            </article>
+        </div>
+        <div class="blg-card">
+            <img src="blogs/independent.jpg" alt="">
+            <article>
+                <h2 class="blg-title">Celebrates Oct 1st</h2>
+                <p class="blg-desc">I'm proud to Celebrates the Independent Day of the federal republic of Nigeria.I dedicate my project; which is a simple model of an aerodynamics
+                    aircraft to celebrates the day
+                </p>
+            </article>
+        </div>
+        <div class="blg-card">
+            <img src="blogs/sug.jpg" alt="">
+            <article>
+                <h2 class="blg-title">Hosted a Spelling Bee Competition from my Office</h2>
+                <p class="blg-desc">It's a great accomplishment,serving as the SUG AGS4 to host a Spelling Bee Competition with
+                    my Team member at Olabisi Onabanjo university.
+<p>Check via the link below:</p>
+<a href="https://youtube.com/shorts/lj1622CvTt8?si=tent8e_ivQA9btia">https://youtube.com/shorts/lj1622CvTt8?si=tent8e_ivQA9btia</a>
+                </p>
+            </article>
+        </div>
+    </section>
+    <footer>
+    <section class="contact" id="contact">
+    <div class="contact-box">
+        <div class="contact-left">
+        <h1>Contact Me <a href="#heading">&#8593</a></h1>
+        <p>dreysmart@gmail.com</p>
+        <p id="mycon">08168215269</p>
+        <div class="socials">
+            <a href="https://wa.me/8117157029?text=!Hey%20java.%20I%20got%20your%20contact%20from%20your%20landing%20page"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://youtube.com/@java_of_oou?si=JhH4jXVLpjSFNqKP"><i class="fa fa-youtube-play"></i></a>
+            <a href="https://x.com/JAVA_OF_OOU?t=WjjLRW3gZOwKPR0lrojffA&s=09"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/asiwaju_of_ibogun?igsh=MTlsa3g3Z2d1MnEzdQ=="><i class="fa fa-instagram"></i></a>
+            <a href="Check out Al _Lukmmanniy’s profile on LinkedIn https://ng.linkedin.com/in/al-lukmmanniy-8aa3a2177"><i class="fa fa-linkedin"></i></a>
+        </div>
+        </div>
+    <div class="contact-right">
+    <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" row="100" placeholder="Your Message"></textarea>
+        <input type="submit">
+    </form>
+    </div>
+    </div>
+    </section>  
+    <span class="copy">Copyright &#169; 2024 Drey Smart</span>
+    </footer>
+</body>
+</html>

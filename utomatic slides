@@ -1,0 +1,120 @@
+<style>
+   /* Basic styles for the body and article slider container */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.article-slider {
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Style each individual article */
+.article {
+    display: none;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Transition effect for fading */
+.article.fade {
+    animation: fadeEffect 3s ease-in-out forwards;
+}
+
+@keyframes fadeEffect {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+} 
+</style>
+<script type="text/javascript">
+let currentIndex = 0;
+const articles = document.querySelectorAll('.article');
+const totalArticles = articles.length;
+
+// Function to show the article at the given index
+function showArticle(index) {
+    articles.forEach((article, i) => {
+        article.classList.remove('fade'); // Remove fade effect from all
+        article.style.display = 'none'; // Hide all articles
+    });
+
+    // Show the current article with fade effect
+    articles[index].style.display = 'block';
+    setTimeout(() => {
+        articles[index].classList.add('fade');
+    }, 100);
+
+    // Update the current index for next slide
+    currentIndex = (index + 1) % totalArticles; // Loop back to first article when finished
+}
+
+// Show the first article initially
+showArticle(currentIndex);
+
+// Change the article every 5 seconds
+setInterval(() => {
+    showArticle(currentIndex);
+}, 5000);
+
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Article Slide Show</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="article-slider">
+        <div class="article">
+            <img src="https://via.placeholder.com/300" alt="Image 1">
+            <p class="description">Short description for Article 1.</p>
+        </div>
+        <div class="article">
+            <img src="https://via.placeholder.com/300" alt="Image 2">
+            <p class="description">Short description for Article 2.</p>
+        </div>
+        <div class="article">
+            <img src="https://via.placeholder.com/300" alt="Image 3">
+            <p class="description">Short description for Article 3.</p>
+        </div>
+        <!-- Add more articles as needed -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
