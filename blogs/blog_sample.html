@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drey Smart Landing Page</title>
+    <style>
+  *{
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+            text-decoration:none;
+            list-style:none;
+            overflow:none;
+            font-family: "Inconsolata", monospace,sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+     header{
+        background: linear-gradient(180deg,#074FB0,#000000);
+        width:100%;
+        height:50px;
+        padding: 0px 5% 5px 0px;
+        box-shadow:5px 6px 12px rgb(167, 166, 166);
+     }
+     header img{
+        width:100px;
+        height:60px;
+
+     }
+     nav{
+        display:flex;
+        flex-direction:row;
+        align-items: center;
+       /* justify-content: space-between;*/
+    }
+     ul.links{
+        display:flex;
+        flex-direction:row;
+        justify-content: flex-end;
+        margin: -45px 0px 0px 0px;
+     }
+     ul.links li{
+        font-weight:bold;
+        font-size:1.0em;
+        margin: 0px 0px 0px 0px;
+        margin-left:25px;
+        color: rgb(255, 255, 255);
+     }
+     ul.links i{
+        font-size:1.2em;
+        margin-right:10px;
+     }
+     ul.links a{
+        text-decoration: none;
+     }
+     ul.links li:link{
+        text-decoration: none;
+     }
+
+     ul.links li:hover{
+       cursor:pointer;
+       padding: 4px;
+       font-size: 0.8;
+       text-align: center;
+       text-decoration: none;
+     }
+    ul.links li:active{
+
+    }
+    section.my-desc{
+        display:grid;
+        width:100%;
+        grid-template-columns:1fr 2fr;
+        padding:10px;  
+        padding-top:40px;
+        background-color:rgb(238, 233, 233);
+       background-image:radial-gradient(#adadad,#ffffff);
+        align-items:center;
+        justify-content:center;
+    }
+     #header-img img{
+        width: 600px;
+        height:600px;
+        margin-top:-60px;
+        object-fit:contain;
+     }
+     body{
+     }
+     section.blog{
+     }
+     .contact-box{
+        width: 94%;
+        padding: 0px 3% 0px 3%;
+     }
+     .headline{
+        width: 80%;
+        margin-left: 5%;
+     }
+     .headline img{
+       width: 60%;
+       height: 380px;
+       margin-top: 30px;
+     }
+     .headline .img-caption{
+        width:60%;
+        display: flex;
+        justify-content: space-between;
+     }
+     .headline .img-caption{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.0em;
+        font-weight: bold;
+        background-color: #e4e4e4;
+     }
+     .img-caption .caption{
+          background-color: white;
+          height: 30px;
+          padding: 6px;
+          text-align: center;
+          width: 33%;
+          border-radius: 5px 5px 5px 5px;
+          box-shadow: 2px 3px 8px #bebebe;
+     }
+     article h1{
+       font-size: 1.0em;
+     }
+     .content-box article{
+          width: 70%;
+          padding-top: 25px;
+          margin-left: 5%;
+     }
+     article p{
+        font-family: sans-serif;
+        font-size:1.1em;
+     }
+section.contact{
+   padding:30px; 
+}
+.contact-box{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-left{
+   position:relative;
+   left: 20%;
+} 
+.contact-left h1{
+    font-family: sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    color:#ffffff;
+}
+.contact-left p{
+    color: #a9c2e4;
+}
+.contact-left .socials i{
+    color: #a9c2e4;
+    font-size: 1.2em;
+}
+.contact-right{
+  position: relative;
+  right:20%;
+}
+input,textarea,submit{
+    display:block;
+    width:80%;
+    border:0px;
+    color: #a9c2e4;
+    background-color: rgba(0, 0, 0, 0.555);
+    font-size:1.0em;
+    height:38px;
+    padding:10px;
+    margin-top:35px;
+}
+input[type="submit"]{
+    background-color:#1b65c7;
+    border: 0px;
+    color:rgb(255, 255, 255);
+}
+textarea{
+    height:200px;
+}
+footer{
+    background: radial-gradient(#074FB0,#000000);
+    margin-top: 100px;
+}
+    </style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/07fa3d3b0b.js" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+    <header>    
+        <!--navlinks-->
+         <nav>  
+            <img src="../logo1.png" alt="logo">
+            <img src="../logo2.png" alt="logo">
+        <ul class="links">
+             <a href="../index.html"><li>Back To Home</li></a>
+        </ul>
+        </nav>
+        </header>
+        <section class="blog">
+            <div class="content-box">
+            <div class="headline">
+            <img src="../about_image5.jpg" alt="media">
+            <div class="img-caption">
+                <span class="caption"><i class="fa fa-user"></i> Java</span>
+                <span class="caption"><i class="fas fa-calendar-alt"></i> Date</span>
+                <span class="caption"><i class="fa fa-clock"></i> Time</span>
+            </div>
+            </div>
+            <article>
+            <h1>Blog Headline Title Image</h1>   
+             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis doloribus i
+             nventore dolorum voluptas nam accusamus debitis incidunt eos facilis, 
+             tempora obcaecati repellat.</p>
+             <p>Voluptas illum assumenda temporibus nesciunt voluptate, ipsum consectetur.</p>
+             
+             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis doloribus i
+                nventore dolorum voluptas nam accusamus debitis incidunt eos facilis, 
+                tempora obcaecati repellat.</p>
+            </article>
+            </div>
+        </section>
+        <footer>
+            <section class="contact">
+            <div class="contact-box">
+                <div class="contact-left">
+                <h1>Contact Me</h1>
+                <p>dreysmart@gmail.com</p>
+                <p>08168215269</p>
+                <div class="socials">
+                    <i class="fa fa-whatsapp"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+                </div>
+            <div class="contact-right">
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" row="100" placeholder="Your Message"></textarea>
+                <input type="submit">
+            </form>
+        </div>
+         </div>
+         </section>
+        <span>Copyright c 2024 Drey Smart</span>
+        </footer>
+         </body>
+         </html>
