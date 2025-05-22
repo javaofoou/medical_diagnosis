@@ -1,0 +1,153 @@
+   <head>
+   <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color:rgb(92, 16, 16);
+    }
+    #contentbox{
+        width: 100%;
+    }
+     form h1{
+        color: white;
+        font-size: 1.0em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 15px;
+     }
+form{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+     }
+     textarea{
+        width: 50%;
+        height: 180px;
+        border-radius: 10px 10px 0px 0px;
+        color:rgb(92, 16, 16);
+        font-weight: bold;
+        padding: 4px;
+        font-family: monospace;
+        margin-bottom: 15px;
+     }
+input{
+        width: 50%;
+        height: 38px;
+        border : 0px;
+        margin-top: 15px;
+     } 
+     input[type="submit"]{
+        font-weight: bold;
+        width: 17%;
+        height: 42px;
+        background-color: rgba(175, 3, 98, 0.432);
+        color: white;
+        border-radius: 7px 7px 7px 7px;                                                                                                                       '
+     }
+     select{
+        width: 50%;
+        height: 38px;
+     }
+     #diagnose-result{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         align-items: bottom;
+         margin-top: 40px;
+         flex-direction: column;
+     }
+     #diagnose-result h2{
+        color:rgb(223, 114, 128);
+     }
+      #diagnose-result p{
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+        margin: 10px;
+      }
+      diagnose-result a{
+       cursor: pointer;
+       font-size: 0.9em;
+       font-weight: bold;
+      }
+
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  textarea,
+  input,
+  select {
+    width: 80%;
+  }
+
+  input[type="submit"] {
+    width: 30%;
+  }
+
+  form h1 {
+    font-size: 1.2em;
+  }
+}
+
+/* Mobile phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  textarea,
+  input,
+  select {
+    width: 90%;
+  }
+
+  input[type="submit"] {
+    width: 50%;
+    font-size: 0.9em;
+  }
+
+  form h1 {
+    font-size: 1em;
+  }
+
+  #diagnose-result h2 {
+    font-size: 1.2em;
+  }
+
+  #diagnose-result p {
+    font-size: 0.9em;
+  }
+
+  #diagnose-result a {
+    font-size: 0.85em;
+  }
+}
+   </style>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   </head>
+    <body> 
+  <%- include('partials/header.ejs') %>     
+  <div id="diagnose-result">
+  <% if (result) { %>
+    <h2>Diagnosis Result:</h2>
+    <p><strong>Diagnosis:</strong> <%= result.illness %></p>
+    <p><strong>Treatment:</strong> <%= result.treatment %></p>
+  <% } else if (noMatch) { %>
+    <h2>No Matching Diagnosis Found</h2>
+    <p>Please <a href="nearest_hospital.html">visit the nearest clinic</a>.</p>
+  <% } %>
+  </div>
+ <div id="contentbox">
+    <form action="" method="POST">
+    <h1>Enter a brief patient's description and Medicheck will provide a list of possible disease diagnoses...</h1>
+    <textarea name="symptoms">Please Clear This Text and Add Your Symptoms...</textarea>
+    <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <input type="text" placeholder="Enter Your Age" name="age" required><br>
+    <input type="submit" name="submit" value="Start Diagnosis">
+    </form>
+</div>
+</body>

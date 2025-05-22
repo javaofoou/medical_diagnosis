@@ -1,0 +1,203 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup - Medicheck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+    body{
+        background-color:rgb(92, 16, 16);
+    }
+    #contentbox{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     }
+     input[type="text"],input[type="password"]{
+        width: 46%;
+        height: 37px;
+        border : 0px;
+        padding: 5px;
+        margin-top: 3px;
+        border-radius: 15px 15px 15px 15px;
+        color:rgba(175, 3, 98, 0.432);
+        font-weight: bold;
+     }
+     input[type="radio"]{
+        width: 30px;
+        height: 16px;
+     }
+     .radio{
+        display: flex;
+        flex-direction: row;
+        color: white;
+     }
+     input[type="submit"]{
+        width: 15%;
+        height: 37px;
+        padding: 7px;
+        border: 0px;
+        border-radius:  15px 15px 15px 15px;
+        margin-top: 3px;
+        background-color: rgba(175, 3, 98, 0.432);
+        color: white;
+     }
+     /* Tablet View */
+@media screen and (max-width: 768px) {
+  form {
+    padding: 0 20px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  input[type="submit"] {
+    width: 40%;
+    font-size: 0.95rem;
+  }
+
+  .radio {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.95rem;
+  }
+
+  input[type="radio"] {
+    width: 20px;
+    height: 14px;
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 480px) {
+  form {
+    padding: 0 10px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 95%;
+    font-size: 0.95rem;
+  }
+
+  input[type="submit"] {
+    width: 70%;
+    font-size: 0.9rem;
+    height: 35px;
+  }
+
+  .radio {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.9rem;
+  }
+
+  input[type="radio"] {
+    width: 18px;
+    height: 12px;
+  }
+}
+</style>
+</head>
+<body>
+ <!--Headers-->
+<%- include('partials/header.ejs') %>  
+<div id="contentbox">
+<form method="POST" action="/signup">
+<input type="text" name="name" placeholder="Enter Your Name"><br>
+<div class="name-error" style="color: white;" ></div><br>
+<input type="text" name="age" placeholder="Enter Your Age"><br>
+<div class="age-error" style="color: white;"></div>
+
+<span class="radio">
+<label style="font-weight: bold; margin-right: 20px; margin-top: 4px;">Gender:</label>
+<span>Male<input type="radio" name="gender" value="male" checked="checked"></span>
+<span>Female<input type="radio" name="gender" value="female"><br></span>
+</span>
+
+<input type="text" name="phone" placeholder="please enter your phone number"><br>
+<div class="phone-error"style="color: white;" ></div><br>
+<input type="text" placeholder="Enter Your Username" name="username" required><br>
+<div class="username-error"style="color: white;" ></div>
+<input type="password" placeholder="Enter Your Password" name="password" required><br>
+<div class="password-error" style="color: white;" ></div>
+<input type="password" placeholder="Re-Enter Your Password" name="confPwd" required><br>
+<input type="submit" name="submit" value="Create an Account">
+</form>
+</div>
+</body>
+
+<script>
+const form = document.querySelector('form');
+const nameError = document.querySelector('.name-error');
+const ageError = document.querySelector('.age-error');
+const phoneError = document.querySelector('.phone-error');
+const usernameError = document.querySelector('.username-error');
+const passwordError = document.querySelector('.password-error');
+form.addEventListener('submit',async(e) => {
+    e.preventDefault();
+
+    //reset errors
+    nameError.textContent = '';
+    ageError.textContent ='';
+    phoneError.textContent = '';
+    usernameError.textContent = '';
+    passwordError.textContent ='';
+
+
+    //get values
+    const name = form.name.value;
+    const age = form.age.value;
+    const gender = form.gender.value;
+    const phone = form.phone.value;
+    const username = form.username.value;
+    const password = form.password.value;
+    const confPwd = form.confPwd.value;
+          
+    if (password !== confPwd) {
+    passwordError.textContent = "Passwords do not match";
+    return; // Prevent form submission
+}
+    //try catch
+    try{
+        const res = await fetch('/signup',{
+            method: 'POST',
+            body: JSON.stringify({name,age,gender,phone,username,password,
+                confPwd}),
+                headers: { 'Content-Type': 'application/json'} 
+        });
+        const data = await res.json();
+        console.log(data);    
+        if(data.errors){
+            nameError.textContent = data.errors.name;
+            ageError.textContent = data.errors.age;
+            phoneError.textContent = data.errors.phone;
+            usernameError.textContent = data.errors.username;
+            passwordError.textContent = data.errors.password;
+        }
+   if(data.user){
+            location.assign('/dashboard');
+        }            
+    }
+    catch(err){
+        console.log(err);
+    }
+});
+</script>

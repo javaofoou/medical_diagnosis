@@ -1,0 +1,117 @@
+<style>
+/* Import fancy font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    header{
+        color: white;
+    }
+    header h1{
+        font-size: 0.9em;
+        font-weight:normal;
+        padding: 4px;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        background-color: rgba(175, 3, 98, 0.432);
+    }
+    header .navbox{
+        width:100%;
+        background-color: white;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    header img.logo{
+        position: relative;
+         width: 69px;
+         height: 50px;
+         left: 2%;
+    }
+    header .links{
+        position: relative;
+        left: 47%;
+    }
+    header a{
+        margin-left: 9px;
+        margin-right: 9px;
+        color:rgb(92, 16, 16);
+        font-weight: bold;
+        text-decoration: none;
+    }
+    header a.active{
+        border-radius: 6px;
+        background-color:rgb(92, 16, 16);
+        color: white;
+        padding: 5px;
+    }
+    /* -------------------------------
+   Media Queries for Responsiveness
+-------------------------------- */
+
+/* Tablets (max-width: 768px) */
+* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1em;
+    padding: 6px;
+  }
+
+  header .navbox {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  header img.logo {
+    margin-bottom: 10px;
+  }
+
+  header .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  header a {
+    font-size: 0.85em;
+    padding: 4px 6px;
+  }
+}
+
+/* Mobile phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 0.95em;
+    padding: 5px;
+  }
+
+  header .links {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  header a {
+    font-size: 0.78em;
+    padding: 5px 8px;
+    display: inline-block;
+    text-align: center;
+  }
+}
+</style>  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<header>  
+  <h1>
+    Welcome to <i>MediCheck</i>
+  </h1>
+
+  <div class="navbox">
+    <img src="/medichecklogo.png" class="logo" alt="logo">
+
+    <span class="links">
+      <a href="/diagnose" class="active"><i class="fa fa-home"></i></a>
+      <a href="/about">How It Works</a>
+      <a href="/faq">FAQs</a>
+      <a href="nearest_hospital.html">Nearby Clinics</a>
+        <a href="/signup">Sign Up</a> 
+        <a href="/login">Login</a>
+    </span>
+  </div>
+</header>

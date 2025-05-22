@@ -1,0 +1,203 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Diagnosis</title>
+    <style type="text/css">
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color:rgb(92, 16, 16);
+         margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+    }
+    .head-section{
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        margin-top: -32px;
+    }
+    #contentbox{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+     #contentbox h1{
+        color: white;
+        font-size: 1.0em;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 25px;
+
+     }
+     form{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+        width: 100%;
+     }
+     textarea{
+        width: 70%;
+        height: 180px;
+        color:rgb(92, 16, 16);
+        font-weight: bold;
+        padding: 8px;
+        font-family: monospace;
+     } 
+     input[type="submit"]{
+        font-weight: normal;
+        width: 17%;
+        height: 42px;
+        background-color: rgba(175, 3, 98, 0.432);
+        color: white;
+        border-radius: 7px 7px 7px 7px;                                                                                                                       '
+     }
+     #user-details{
+       background-color: rgba(175, 3, 98, 0.432);
+        height: 600px;
+     }
+     .sidebar {
+      width: 250px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgba(175, 3, 98, 0.432);
+      padding: 20px;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar p {
+      margin: 10px 0;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .dashboard-content {
+      flex: 1;
+      padding: 30px;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #fff;
+    }
+    /* Tablet Devices */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .sidebar p {
+    font-size: 14px;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  form {
+    width: 90%;
+    margin: auto;
+  }
+
+  textarea {
+    width: 90%;
+  }
+
+  input[type="submit"] {
+    width: 40%;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 480px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .sidebar p {
+    font-size: 13px;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  #contentbox h1 {
+    font-size: 1rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  textarea {
+    width: 95%;
+    height: 150px;
+    font-size: 0.9rem;
+  }
+
+  input[type="submit"] {
+    width: 60%;
+    font-size: 0.9rem;
+    height: 38px;
+  }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="head-section">
+    <!--header-->
+ <%- include('partials/dashboard_header.ejs') %>
+ </div>
+  <div class="sidebar">
+    <h2>User Profile</h2>
+    <% if (user) { %>
+      <p><span class="highlight">Username:</span> <%= user.username %></p>
+      <p><span class="highlight">Full Name:</span> <%= user.name %></p>
+      <p><span class="highlight">Phone:</span> <%= user.phone %></p>
+      <p><span class="highlight">Age:</span> <%= user.age %></p>
+      <p><span class="highlight">Gender:</span> <%= user.gender %></p>
+    <% } else { %>
+      <p>User not found.</p>
+    <% } %>
+  </div>
+    <form action="/protecteddiagnose" method="POST">
+    <h1 style="color: white; font-size: 0.9em; text-align: center;">Enter a brief patient's description and Medicheck will provide a list of possible disease diagnoses...</h1>
+    <textarea name="symptoms" style="margin-bottom: 15px; margin-top: 10px;">Please Enter Symptom:</textarea>
+     <input type="submit" name="submit" value="Start Diagnosis">
+</form>
+</body>

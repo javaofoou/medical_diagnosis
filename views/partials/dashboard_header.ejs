@@ -1,0 +1,140 @@
+
+<style>
+    header{
+        color: white;
+    }
+    header h1{
+        font-size: 0.9em;
+        font-weight:normal;
+        padding: 4px;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        background-color: rgba(175, 3, 98, 0.432);
+    }
+    header .navbox{
+        width:100%;
+        background-color: white;
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    header img.logo{
+        position: relative;
+         width: 69px;
+         height: 50px;
+         left: 2%;
+    }
+    header .links{
+        position: relative;
+        left: 47%;
+    }
+    header a{
+        margin-left: 9px;
+        margin-right: 9px;
+        color:rgb(92, 16, 16);
+        font-weight: bold;
+        text-decoration: none;
+    }
+    header a.active{
+        border-radius: 6px;
+        background-color:rgb(92, 16, 16);
+        color: white;
+        padding: 5px;
+    }
+    /* Tablet View */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1em;
+  }
+
+  header .navbox {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  header img.logo {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  header .links {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  header a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile View */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 0.95em;
+  }
+
+  header .navbox {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  header img.logo {
+    position: static;
+    margin-bottom: 8px;
+    width: 60px;
+    height: auto;
+  }
+
+  header .links {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  header a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  header a.active {
+    padding: 6px 10px;
+  }
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</style>  
+<header>  
+  <h1>
+    Welcome to <i>MediCheck</i>
+  </h1>
+
+  <div class="navbox">
+    <img src="/medichecklogo.png" class="logo" alt="logo">
+
+    <span class="links">
+      <a href="/diagnose" class="active"><i class="fa fa-home"></i></a>
+      <a href="/about">How It Works</a>
+      <a href="/faq">FAQs</a>
+      <a href="nearest_hospital.html">Nearby Clinics</a>
+
+      <% if (!user) { %>
+        <a href="/signup">Sign Up</a> 
+        <a href="/login" style="border-radius: 6px;
+                                background-color:rgb(92, 16, 16);
+                                color: white;
+                                padding: 5px;">Login</a>
+      <% } else { %>
+        <a href="/logout" style="border-radius: 6px;
+                                 color: rgb(92,16,16);
+                                 padding: 5px;">Logout <i class="fa fa-sign-out"></i></a>
+      <% } %>
+    </span>
+  </div>
+</header>

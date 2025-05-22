@@ -1,0 +1,26 @@
+{
+  "name": "diagnosis_system",
+  "version": "1.0.0",
+  "description": "diagnosis system using html,css,js and nodejs",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed/symptomsSeeder.js"
+  },
+  "author": "me",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.15.0"
+  }
+}

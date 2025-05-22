@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nearest Hospitals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align:center; margin: 10px 0;">Nearest Hospitals to Your Location</h2>
+    <div id="map"></div>
+
+    <script>
+        let map;
+        let service;
+        let infowindow;
+
+        function initMap() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    const userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                    console.log("User location:", userLocation.lat(), userLocation.lng());
+
+                    initializeMap(userLocation);
+                }, error => {
+                    console.warn("Geolocation failed or denied. Using fallback location (Lagos).", error);
+                    const fallbackLocation = new google.maps.LatLng(6.5244, 3.3792); // Lagos
+                    initializeMap(fallbackLocation);
+                    alert("Using fallback location (Lagos) because location access was denied or unavailable.");
+                });
+            } else {
+                alert("Geolocation is not supported by your browser.");
+            }
+        }
+
+        function initializeMap(location) {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: location,
+                zoom: 14
+            });
+
+            new google.maps.Marker({
+                position: location,
+                map,
+                title: "You are here",
+                icon: {
+                    url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                }
+            });
+
+            const request = {
+                location: location,
+                radius: '5000',
+                type: ['hospital']
+            };
+
+            infowindow = new google.maps.InfoWindow();
+            service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, callback);
+        }
+
+        function callback(results, status) {
+            console.log("Nearby search status:", status);
+            console.log("Results:", results);
+
+            if (status === google.maps.places.PlacesServiceStatus.OK && results.length > 0) {
+                for (let i = 0; i < results.length; i++) {
+                    createMarker(results[i]);
+                }
+            } else if (results.length === 0) {
+                alert("No hospitals found nearby.");
+            } else {
+                alert("Places API error: " + status);
+            }
+        }
+
+        function createMarker(place) {
+            const marker = new google.maps.Marker({
+                map,
+                position: place.geometry.location
+            });
+
+            google.maps.event.addListener(marker, "click", () => {
+                infowindow.setContent(`<strong>${place.name}</strong><br>${place.vicinity}`);
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+
+    <!-- Google Maps JavaScript API with Places Library -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb0oDYsK_FhrTCpnsutFvOzmpDI8mEb3c&libraries=places&callback=initMap">
+    </script>
+</body>
+</html>
+
+<!--YOUR_GOOGLE_MAPS_API_KEY: AIzaSyBb0oDYsK_FhrTCpnsutFvOzmpDI8mEb3c -->

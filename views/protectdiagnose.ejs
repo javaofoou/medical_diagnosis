@@ -1,0 +1,267 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Diagnosis</title>
+    <style type="text/css">
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color:rgb(92, 16, 16);
+         margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+    }
+    .head-section{
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        margin-top: -32px;
+    }
+    #contentbox{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+     #contentbox h1{
+        color: white;
+        font-size: 1.0em;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 25px;
+
+     }
+     form{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        width: 100%;
+     }
+     textarea{
+        width: 70%;
+        height: 180px;
+        color:rgb(92, 16, 16);
+        font-weight: bold;
+        padding: 8px;
+        margin-bottom: 35px;
+        font-family: monospace;
+     } 
+     input[type="submit"]{
+        font-weight: normal;
+        width: 17%;
+        height: 42px;
+        background-color: rgba(175, 3, 98, 0.432);
+        color: white;
+        border-radius: 7px 7px 7px 7px;                                                                                                                       '
+     }
+     #user-details{
+       background-color: rgba(175, 3, 98, 0.432);
+        height: 600px;
+     }
+     .sidebar {
+      width: 250px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgba(175, 3, 98, 0.432);
+      padding: 20px;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar p {
+      margin: 10px 0;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .dashboard-content {
+      flex: 1;
+      padding: 30px;
+    }
+      #diagnose-result{
+        margin-top: 100px;
+        margin-left: 35%;
+      }
+      #diagnosis-result a {
+        font-size: 1.0em;
+        color:rgb(228, 174, 207);
+        text-decoration: underline;
+        font-style: italic;
+        font-weight: bold;
+      }
+      #diagnose-result h2{
+           color: palevioletred;
+
+      }
+      #diagnose-result p{
+        color: white;
+      }
+    .highlight {
+      font-weight: bold;
+      color: #fff;
+    }
+    /* Tablet Devices */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .sidebar p {
+    font-size: 14px;
+  }
+
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  form, textarea {
+    width: 90%;
+  }
+
+  textarea {
+    height: 150px;
+    font-size: 0.95rem;
+  }
+
+  input[type="submit"] {
+    width: 40%;
+    font-size: 0.9rem;
+  }
+
+  #diagnose-result {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+  }
+
+  #diagnose-result p {
+    font-size: 0.95rem;
+  }
+
+  #diagnosis-result a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 480px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .sidebar p {
+    font-size: 13px;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  textarea {
+    width: 95%;
+    height: 140px;
+    font-size: 0.9rem;
+  }
+
+  input[type="submit"] {
+    width: 70%;
+    font-size: 0.85rem;
+    height: 38px;
+  }
+
+  #diagnose-result {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  #diagnose-result p {
+    font-size: 0.9rem;
+  }
+
+  #diagnosis-result a {
+    font-size: 0.85rem;
+  }
+
+  #diagnose-result h2 {
+    font-size: 1.2rem;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="head-section">
+    <!--header-->
+ <%- include('partials/dashboard_header.ejs') %>
+ </div>
+  <div class="sidebar">
+    <h2>User Profile</h2>
+    <% if (user) { %>
+      <p><span class="highlight">Username:</span> <%= user.username %></p>
+      <p><span class="highlight">Full Name:</span> <%= user.name %></p>
+      <p><span class="highlight">Phone:</span> <%= user.phone %></p>
+      <p><span class="highlight">Age:</span> <%= user.age %></p>
+      <p><span class="highlight">Gender:</span> <%= user.gender %></p>
+    <% } else { %>
+      <p>User not found.</p>
+    <% } %>
+  </div>
+ <div id="contentbox">
+    <div id="diagnose-result">
+  <% if (result) { %>
+    <h2>Diagnosis Result:</h2>
+    <p><strong>Diagnosis:</strong> <%= result.illness %></p>
+    <p><strong>Treatment:</strong> <%= result.treatment %></p>
+  <% } else if (noMatch) { %>
+    <h2>No Matching Diagnosis Found</h2>
+    <p>Please <a href="nearest_hospital.html">visit the nearest clinic</a>.</p>
+  <% } %>
+  </div>
+    <form action="" method="POST">
+    <h1>Enter a brief patient's description and Medicheck will provide a list of possible disease diagnoses...</h1>
+    <textarea name="symptoms">Please Clear this Text and Add your Symptoms...</textarea>
+    <input type="submit" name="submit" value="Start Diagnosis">
+    </form>
+</div>
+</body>

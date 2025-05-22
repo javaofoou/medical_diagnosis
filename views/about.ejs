@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How MediCheck Works</title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Link your main stylesheet here -->
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: #fff;
+      margin-top: 3rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+
+    .step {
+      margin-bottom: 2rem;
+    }
+
+    .step h2 {
+      color: #34495e;
+    }
+
+    .step p {
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .highlight {
+      color: #8e44ad;
+      font-weight: bold;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-style: italic;
+      color: #888;
+      margin-top: 2rem;
+    }
+    /* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .step h2 {
+    font-size: 1.2rem;
+  }
+
+  .step p {
+    font-size: 0.95rem;
+  }
+}
+/* Mobile phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .step h2 {
+    font-size: 1rem;
+  }
+
+  .step p {
+    font-size: 0.9rem;
+  }
+
+  .footer-note {
+    font-size: 0.85rem;
+  }
+}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+  <%- include('partials/header.ejs') %>
+  <div class="container">
+    <h1>How MediCheck Works</h1>
+
+    <div class="step">
+      <h2>1. Create an Account or Log In</h2>
+      <p>
+        To get the best experience, <span class="highlight">sign up or log in</span> to your MediCheck account. This lets you save your health records, view past diagnoses, and get personalized suggestions.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>2. Enter Your Symptoms</h2>
+      <p>
+        On the <span class="highlight">Diagnose</span> page, describe your symptoms by selecting them from the list or typing them in. Be as accurate as possible to get better recommendations.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>3. Get Instant Analysis</h2>
+      <p>
+        MediCheck instantly analyzes your symptoms using intelligent logic and offers possible conditions or health issues. You’ll also see recommended treatments, medications, or steps to take.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>4. Locate Nearby Clinics</h2>
+      <p>
+        If the condition needs professional attention, we’ll help you find <span class="highlight">nearby clinics or hospitals</span> so you can take immediate action.
+      </p>
+    </div>
+
+    <p class="footer-note">
+      MediCheck is not a replacement for professional medical advice. Always consult a doctor when unsure.
+    </p>
+  </div>
+</body>
+</html>

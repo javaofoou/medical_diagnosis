@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQs | MediCheck</title>
+  <link rel="stylesheet" href="/styles.css"> <!-- Your main stylesheet -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <style>
+    /* Basic FAQ Styles */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    .faq-question {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 0.5rem;
+      color: #555;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+    @media screen and (max-width: 768px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .faq-item {
+    padding: 0.9rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile phones (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .faq-item {
+    padding: 0.8rem;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+  </style>
+</head>
+<body>
+  <%- include('partials/header.ejs') %>
+  <div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+      <div class="faq-question">What is MediCheck?</div>
+      <div class="faq-answer">MediCheck is a medical diagnostic platform that helps users check symptoms, get treatment suggestions, and find nearby clinics.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Is MediCheck free to use?</div>
+      <div class="faq-answer">Yes, MediCheck is completely free for users. You can diagnose symptoms and get recommendations without any charge.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How accurate are the diagnoses?</div>
+      <div class="faq-answer">While MediCheck uses intelligent logic to match symptoms, it does not replace professional medical consultation. Always consult a doctor for serious conditions.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do I need to create an account?</div>
+      <div class="faq-answer">Creating an account allows you to save your health records and track previous diagnoses, but you can also use the platform anonymously.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I find nearby clinics?</div>
+      <div class="faq-answer">Use the “Nearby Clinics” link in the navigation bar. We’ll help you find clinics around your current location.</div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle FAQ answers on click
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
