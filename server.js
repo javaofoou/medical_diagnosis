@@ -20,7 +20,6 @@ app.use(express.static('public'));
 
 app.use("/",authRoutes);
 app.use("/",diagnoseRoute);
-app.get('*',checkUser);
 
 app.use((req, res) => {
   res.status(404).render('nopage');
