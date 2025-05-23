@@ -14,13 +14,64 @@ const userSchema = new mongoose.Schema({
         min: [0, "Age cannot be negative"],
         max: [120, "Unrealistic Age"]
          },
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+        lowercase: true,
+        match: [/\S+@\S+\.\S+/, "Invalid Email"]
+    },
+    address: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    city: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    state: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    country: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    zip: {
+        type: String,
+        required: true,
+        match: [/^[0-9]{5}$/, "Invalid Zip Code"]
+    },
+    occupation: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    Bloodgroup:{
+        type: String,
+        required: true,
+        enum: ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'],
+        trim: true
+    },
+    maritalStatus: {
+        type: String,
+        required: true,
+        enum: ['Single', 'Married', 'Divorced', 'Widowed'],
+        trim: true
+    },
     gender: {
         type: String,
         required: true
     },
     phone: {
         type: String,
-        required: true
+        required: true,
+        match: [/^[0-9]{10,15}$/, "Invalid Phone Number"]
     },
     username: {
         type: String,
