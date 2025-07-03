@@ -253,8 +253,8 @@
     <h2>Diagnosis Result:</h2>
     <p><strong>Diagnosis:</strong> <%= result.illness %></p>
     <p><strong>Treatment:</strong> <%= result.treatment %></p>
-    <p><strong>Dosage:</strong> <%= result.dosage %></p>
-    <p><strong>Recommendation:</strong> <%= result.recommendation %></p>
+    <p><strong>Dosage:</strong> <%=result.dosage%></p>
+    <p><strong>Recommendation:</strong> <%=result.recommendation%></p>
   <% } else if (noMatch) { %>
     <h2>No Matching Diagnosis Found</h2>
     <p>Please <a href="nearest_hospital.html">visit the nearest clinic</a>.</p>
